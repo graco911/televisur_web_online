@@ -40,14 +40,26 @@ h1, h2 { margin: 0; font-family: "Space Grotesk", sans-serif; font-weight: 600; 
 .button-arrow { margin-left: 12px; color: var(--lime); font-size: 17px; }
 .hero-note { margin-top: 21px; color: #86897f; font-size: 11px; }
 .note-star { margin-right: 7px; color: var(--orange); }
-.hero-art { position: absolute; top: 50%; right: 7%; width: min(39vw, 480px); height: min(39vw, 480px); transform: translateY(-50%); border-radius: 50%; background: #e3eaf7; }
-.art-sun { position: absolute; top: 17%; right: 19%; width: 52%; aspect-ratio: 1; border-radius: 50%; background: var(--orange); }
-.art-orbit { position: absolute; top: 7%; left: 7%; width: 86%; height: 86%; border: 1px solid rgb(36 81 166 / 22%); border-radius: 50%; }
-.orbit-two { top: 14%; left: 14%; width: 72%; height: 72%; border-style: dashed; border-color: rgb(36 81 166 / 30%); }
-.art-caption { position: absolute; left: 12%; top: 18%; display: flex; flex-direction: column; gap: 5px; color: var(--green); font-size: 8px; font-weight: 700; letter-spacing: 1.3px; }
-.art-stamp { position: absolute; right: 15%; bottom: 17%; width: 91px; height: 91px; display: grid; place-content: center; border: 1px solid rgb(23 33 58 / 30%); border-radius: 50%; color: var(--ink); font: 600 30px/.85 "Space Grotesk", sans-serif; text-align: center; transform: rotate(-12deg); }
-.art-stamp span { color: var(--green); font-size: 24px; }
-.art-bottom-line { position: absolute; top: 67%; left: 18%; width: 41%; height: 1px; background: var(--green); transform: rotate(-38deg); transform-origin: left center; }
+.hero-art { position: absolute; top: 50%; right: 7%; width: min(39vw, 480px); height: min(32vw, 390px); transform: translateY(-50%); }
+.art-orbit { position: absolute; top: 5%; left: 4%; width: 92%; height: 88%; border: 1px solid rgb(36 81 166 / 20%); border-radius: 12px; transform: rotate(-5deg); }
+.orbit-two { top: 9%; left: 9%; width: 82%; height: 82%; border-style: dashed; border-color: rgb(36 81 166 / 25%); transform: rotate(4deg); }
+.art-screen { position: absolute; top: 17%; left: 9%; width: 82%; height: 66%; padding: 16px 18px 13px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid rgb(255 255 255 / 22%); border-radius: 6px; background: linear-gradient(145deg, #274c91, #17213a 78%); box-shadow: 0 20px 55px rgb(23 33 58 / 20%); color: white; }
+.art-screen-header, .art-screen-footer { position: absolute; left: 18px; right: 18px; display: flex; align-items: center; justify-content: space-between; }
+.art-screen-header { top: 14px; }
+.art-channel, .art-channel-name, .art-screen-footer { font-size: 8px; font-weight: 700; letter-spacing: 1.2px; }
+.art-channel { display: flex; align-items: center; gap: 7px; color: #f5f7fc; }
+.art-live-dot { width: 7px; height: 7px; border-radius: 50%; background: #ed7567; box-shadow: 0 0 0 3px rgb(237 117 103 / 18%); }
+.art-channel-name, .art-screen-footer { color: #afc5ed; }
+.art-screen-brand { margin: 0 0 11px; font: 600 clamp(28px, 3.2vw, 39px)/1 "Space Grotesk", sans-serif; letter-spacing: -2px; }
+.art-screen-brand span { color: var(--lime); }
+.art-screen-play { width: 39px; height: 39px; display: grid; place-items: center; border: 1px solid rgb(169 200 255 / 70%); border-radius: 50%; background: rgb(169 200 255 / 12%); color: var(--lime); }
+.art-screen-play span { margin-left: 2px; font-size: 11px; }
+.art-screen-footer { bottom: 13px; font-size: 7px; }
+.art-signal { height: 15px; display: flex; align-items: end; gap: 3px; }
+.art-signal i { width: 3px; height: 35%; border-radius: 2px; background: var(--lime); }
+.art-signal i:nth-child(2) { height: 65%; }
+.art-signal i:nth-child(3) { height: 100%; }
+.art-signal i:nth-child(4) { height: 55%; }
 .hero-index { position: absolute; bottom: 35px; right: 8.3%; color: #a4a59a; font-size: 10px; letter-spacing: 1px; }
 .hero-index span { color: var(--green); font-weight: 700; }
 .watch-section { padding: 86px 8.3% 91px; background: #e9eef8; }
@@ -105,9 +117,10 @@ h1, h2 { margin: 0; font-family: "Space Grotesk", sans-serif; font-weight: 600; 
   .hero-copy { width: 100%; }
   .hero h1 { font-size: clamp(49px, 11vw, 70px); letter-spacing: -3px; }
   .hero-description { max-width: 380px; font-size: 13px; }
-  .hero-art { top: auto; right: 8%; bottom: 30px; width: min(62vw, 330px); height: min(62vw, 330px); transform: none; }
-  .art-stamp { width: 68px; height: 68px; font-size: 24px; }
-  .art-stamp span { font-size: 19px; }
+  .hero-art { top: auto; right: 5%; bottom: 30px; width: min(84vw, 390px); height: min(62vw, 290px); transform: none; }
+  .art-screen { padding-right: 12px; padding-left: 12px; }
+  .art-screen-header, .art-screen-footer { left: 12px; right: 12px; }
+  .art-channel-name { font-size: 7px; }
   .hero-index { right: 7%; bottom: 20px; }
   .watch-section { padding: 62px 6% 65px; }
   .section-heading { align-items: flex-start; flex-direction: column; gap: 13px; }
