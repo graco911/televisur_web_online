@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f6fb">
+    <meta name="description" content="Televisur, la señal del sureste. Mira nuestra transmisión en vivo y descubre historias que nos conectan.">
+    <title>Televisur — La señal del sureste</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Televisur, inicio">
+        <img class="brand-image" src="img/header_logo_televisur.jpg" alt="Televisur, la señal del sureste">
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#en-vivo">En vivo</a>
+        <a href="#nosotros">Nosotros</a>
+      </nav>
+      <a class="header-live" href="#en-vivo"><span class="live-dot"></span> Estamos al aire</a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> La señal del sureste</p>
+          <h1 id="hero-title">Lo que somos,<br>se ve <span>mejor juntos.</span></h1>
+          <p class="hero-description">Historias, noticias y momentos que nos acercan. Televisur: una ventana a lo que pasa aquí, contigo y en todas partes.</p>
+          <a class="primary-button" href="#en-vivo">
+            <span class="button-play" aria-hidden="true">▶</span>
+            Ver transmisión en vivo
+            <span class="button-arrow" aria-hidden="true">↗</span>
+          </a>
+          <div class="hero-note"><span class="note-star" aria-hidden="true">✳</span> Cerca de ti. En cualquier pantalla.</div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-sun"></div>
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="art-caption"><span>SEÑAL ABIERTA</span><span>DESDE EL SURESTE</span></div>
+          <div class="art-stamp">TV<br><span>sur</span></div>
+          <div class="art-bottom-line"></div>
+        </div>
+        <div class="hero-index" aria-hidden="true"><span>01</span> — 03</div>
+      </section>
+
+      <section class="watch-section" id="en-vivo" aria-labelledby="watch-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> Siempre cerca</p>
+            <h2 id="watch-title">Televisur <span>en vivo.</span></h2>
+          </div>
+          <p class="section-aside">Sintoniza nuestra señal desde donde estés.<br>La programación que nos une, a un clic.</p>
+        </div>
+
+        <div class="player-card">
+          <div class="player-topline">
+            <span class="player-channel"><span class="channel-mark">T</span> CANAL TELEVISUR</span>
+            <span class="live-badge"><span class="live-dot"></span> EN VIVO</span>
+          </div>
+          <div class="video-frame">
+            <video id="live-video" controls playsinline preload="none" aria-label="Transmisión en vivo de Televisur"></video>
+            <div class="video-overlay" id="video-overlay">
+              <div class="overlay-orbit"></div>
+              <div class="overlay-brand">televisur<span>.</span></div>
+              <p class="player-message" id="player-message" role="status" aria-live="polite">La señal está lista para ti</p>
+              <button class="player-start" id="play-button" type="button" aria-label="Reproducir transmisión en vivo">
+                <span aria-hidden="true">▶</span>
+              </button>
+              <button class="retry-button" id="retry-button" type="button" hidden>Intentar de nuevo</button>
+              <span class="overlay-footnote">LA SEÑAL DEL SURESTE</span>
+            </div>
+          </div>
+          <div class="player-footer">
+            <span><span class="signal-indicator" id="signal-indicator"></span><span id="signal-status">Esperando para conectar</span></span>
+            <span class="player-footer-right">TELEVISION QUE NOS ACERCA <span aria-hidden="true">✳</span></span>
+          </div>
+        </div>
+        <p class="player-hint">¿No inicia la transmisión? Comprueba tu conexión e inténtalo de nuevo.</p>
+      </section>
+
+      <section class="about-section" id="nosotros" aria-labelledby="about-title">
+        <div class="about-logo">
+          <img src="img/header_logo_televisur.jpg" alt="Logotipo de Televisur: señal del sureste">
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> Una señal, muchas historias</p>
+          <h2 id="about-title">De aquí.<br><span>Para todos.</span></h2>
+        </div>
+        <div class="about-description">
+          <p>Televisur es un espacio para encontrarnos. Compartimos lo que sucede en nuestra comunidad y celebramos las historias, la cultura y las voces que hacen único al sureste.</p>
+          <a href="#en-vivo" class="text-link">Acompáñanos en vivo <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#" aria-label="Televisur, inicio">
+        <img class="brand-image" src="img/header_logo_televisur.jpg" alt="Televisur, la señal del sureste">
+      </a>
+      <span class="footer-tagline">La señal del sureste.</span>
+      <span class="footer-copyright">© <span id="year"></span> Televisur</span>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js" defer></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>
