@@ -92,6 +92,35 @@
   video.addEventListener("error", () => {
     if (video.error) showError("No pudimos cargar el video. Revisa tu conexión e inténtalo de nuevo.");
   });
+
+  const filters = document.querySelectorAll(".news-filter");
+  const stories = document.querySelectorAll(".story-grid .story-card");
+  const featuredStory = document.querySelector(".featured-story");
+  const emptyStories = document.querySelector(".empty-stories");
+
+  filters.forEach((filter) => {
+    filter.addEventListener("click", () => {
+      const selectedCategory = filter.dataset.filter;
+      const showFeatured = selectedCategory === "all" || featuredStory.dataset.category === selectedCategory;
+      let visibleStories = showFeatured ? 1 : 0;
+      featuredStory.hidden = !showFeatured;
+
+      filters.forEach((item) => {
+        const isSelected = item === filter;
+        item.classList.toggle("is-active", isSelected);
+        item.setAttribute("aria-pressed", String(isSelected));
+      });
+
+      stories.forEach((story) => {
+        const isVisible = selectedCategory === "all" || story.dataset.category === selectedCategory;
+        story.hidden = !isVisible;
+        if (isVisible) visibleStories += 1;
+      });
+
+      emptyStories.hidden = visibleStories > 0;
+    });
+  });
+
   document.getElementById("year").textContent = new Date().getFullYear();
 
   prepareStream();
