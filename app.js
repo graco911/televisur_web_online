@@ -1,5 +1,5 @@
 (() => {
-  const streamUrl = "https://gracodev.stream/televisur/index.m3u8";
+  const streamUrl = "https://gracodev.stream/hls/televisur/index.m3u8";
   const video = document.getElementById("live-video");
   const overlay = document.getElementById("video-overlay");
   const playButton = document.getElementById("play-button");
