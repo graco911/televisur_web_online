@@ -87,6 +87,7 @@ h1, h2 { margin: 0; font-family: "Space Grotesk", sans-serif; font-weight: 600; 
 .player-message { position: relative; margin: 8px 0 18px; color: #d4def2; font-size: 12px; }
 .player-start { position: relative; width: 48px; height: 48px; display: grid; place-items: center; border: 0; border-radius: 50%; background: var(--lime); color: var(--ink); cursor: pointer; transition: transform .2s, background .2s; }
 .player-start:hover { transform: scale(1.08); background: white; }
+.player-start:disabled { cursor: wait; opacity: .6; }
 .player-start span { margin-left: 3px; font-size: 13px; }
 .player-start[hidden], .retry-button[hidden] { display: none; }
 .retry-button { position: relative; padding: 10px 15px; border: 1px solid rgb(255 255 255 / 48%); border-radius: 3px; background: transparent; color: white; font-size: 11px; cursor: pointer; }
